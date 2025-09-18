@@ -1,19 +1,14 @@
-
 # Terraform
 *.tfstate
 *.tfstate.*
-.terraform/
-.terraform.lock.hcl
-
-# Local files
+crash.log
 *.log
-.DS_Store
-
-# dotenv
+.terraform/
+.terraformrc
+terraform.rc
+tf.plan
+# Local env
 .env
-
-# kubernetes manifests (if you generate temporary files)
-*.yaml.k8s
-
-# OS files
+# OS
+.DS_Store
 Thumbs.db

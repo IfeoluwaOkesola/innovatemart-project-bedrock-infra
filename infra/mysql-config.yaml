@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: infra
+data:
+  MYSQL_DATABASE: catalog_db
