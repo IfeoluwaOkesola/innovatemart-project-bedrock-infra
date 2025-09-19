@@ -2,16 +2,16 @@ name: Terraform CI/CD
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
     paths:
-      - 'infra/**'
+      - "infra/**"
   push:
-    branches: [ main ]
+    branches: [ "main" ]
     paths:
-      - 'infra/**'
+      - "infra/**"
 
 permissions:
-  id-token: write   # for GitHub OIDC → AWS
+  id-token: write
   contents: read
 
 concurrency:
@@ -22,13 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+        shell: bash
         working-directory: infra
 
     env:
       AWS_REGION: eu-west-1
       TF_IN_AUTOMATION: "true"
-
-    steps:
+steps:
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -43,7 +43,8 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false
-- name: Terraform Init
+
+      - name: Terraform Init
         run: terraform init -input=false
 
       - name: Terraform Format
