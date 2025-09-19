@@ -33,11 +33,8 @@ This project provisions the **Retail Store Sample App** on **Amazon Elastic Kube
 ---
 
 ## 2. Application Access
-The **UI service** is exposed publicly via AWS Load Balancer.
+The **UI service** is exposed publicly via AWS Load Balancer: http://aabeab45eec0948b1a1f2a48ac4c6633-1151972160.eu-west-1.elb.amazonaws.com
 
-```text
-http://aabeab45eec0948b1a1f2a48ac4c6633-1151972160.eu-west-1.elb.amazonaws.com
-```
 ## 3. Developer Access (Read-Only)
 
 A read-only IAM user named **`dev-readonly`** has been created to allow developers to inspect the cluster without modifying resources.
