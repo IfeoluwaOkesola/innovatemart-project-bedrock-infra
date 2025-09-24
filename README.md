@@ -1,3 +1,9 @@
+## 🚨 Project Status
+
+All AWS resources for this project (e.g.,VPC, EC2 instances, EKS, databases) have been **deprovisioned** to avoid ongoing cloud costs.  
+This does not affect the validity of the project — the repository contains all **infrastructure code, deployment scripts, and setup instructions** needed to reproduce the environment.
+
+
 # Project Bedrock — InnovateMart Retail Store Deployment
 2nd Assignment for 3rd Semester cloud Engineering at Alt School
 ## 1. Architecture Overview
